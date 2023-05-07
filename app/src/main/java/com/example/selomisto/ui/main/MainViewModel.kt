@@ -22,6 +22,12 @@ class MainViewModel @Inject constructor(private val userRepository: UserReposito
         }
     }
 
+    fun getUserByEmail(email: String) {
+        viewModelScope.launch {
+
+        }
+    }
+
     fun getAllUsers() {
         viewModelScope.launch {
             userRepository.getAllUsers()

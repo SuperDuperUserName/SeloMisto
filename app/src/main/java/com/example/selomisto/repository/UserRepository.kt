@@ -28,6 +28,10 @@ class UserRepository @Inject constructor(private val userApi: UserApi) {
         handleUserResponse(response)
     }
 
+    suspend fun getUserByEmail(email: String) {
+
+    }
+
     private fun handleUserResponse(response: Response<User>) {
         if (response.isSuccessful && response.body() != null) {
             _userLiveData.postValue(NetworkResult.Success(response.body()!!))

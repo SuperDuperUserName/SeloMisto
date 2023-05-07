@@ -106,6 +106,14 @@
             android:text="@string/txt_no_account_signup"
             android:textSize="14sp" />
 
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/btn_google"
+            android:src="@drawable/google"/>
+
 
     </LinearLayout>
 

@@ -26,6 +26,11 @@ class AuthRepository @Inject constructor(private val authApi: AuthApi) {
         handleToken(response)
     }
 
+    suspend fun loginWithGoogle(loginRequest: RegisterRequest) {
+        val response = authApi.authWithGoogle(loginRequest)
+        handleToken(response)
+    }
+
     private fun handleToken(response: Response<AuthResponse>) {
         if (response.isSuccessful && response.body() != null) {
             _tokenLiveData.postValue(NetworkResult.Success(response.body()!!))

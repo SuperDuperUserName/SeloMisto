@@ -10,4 +10,16 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/greetings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="163dp"
+        android:text="Logout" />
+
 </RelativeLayout>

@@ -31,6 +31,12 @@ class AuthViewModel @Inject constructor(private val authRepository: AuthReposito
         }
     }
 
+    fun loginWithGoogle(loginRequest: RegisterRequest) {
+        viewModelScope.launch {
+            authRepository.loginWithGoogle(loginRequest)
+        }
+    }
+
     fun validateCredentials(firstname: String, lastname: String, email: String, password: String, isLogin: Boolean): Pair<Boolean, String> {
         var result = Pair(true, "")
         if(TextUtils.isEmpty(email) || (!isLogin && (TextUtils.isEmpty(firstname) || TextUtils.isEmpty(lastname))) || TextUtils.isEmpty(password)){
